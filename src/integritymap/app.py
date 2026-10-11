@@ -305,11 +305,11 @@ def main() -> None:
                 f'<div class="kpi"><b>{len(b.papers) - n_att}</b><span>defense papers</span></div>'
                 f'<div class="kpi"><b>{len(b.evaluations)}</b><span>evaluations of a defense against an attack</span></div>'
                 f'<div class="kpi"><b>{works}</b><span>of them find that the defense works</span></div></div>', unsafe_allow_html=True)
-    tabs = st.tabs(["Pipeline", "Papers", "Coverage map", "Budgets", "Provenance audit"])
+    tabs = st.tabs(["Papers", "Pipeline", "Coverage map", "Budgets", "Provenance audit"])
     with tabs[0]:
-        pipeline_tab(b.papers)
-    with tabs[1]:
         papers_tab(b.papers, b.evaluations, index)
+    with tabs[1]:
+        pipeline_tab(b.papers)
     with tabs[2]:
         coverage_tab(cells, b.noise_only, b.evaluations)
     with tabs[3]:
