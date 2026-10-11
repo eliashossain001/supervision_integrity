@@ -1,0 +1,22 @@
+[theme]
+base = "light"
+primaryColor = "#1C2430"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F6F7F9"
+textColor = "#1C2430"
+linkColor = "#1F5FA8"
+borderColor = "#E3E7EC"
+showWidgetBorder = true
+baseRadius = "0.25rem"
+baseFontSize = 15
+font = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap, sans-serif"
+headingFont = "Newsreader:https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&display=swap, Georgia, serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

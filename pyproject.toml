@@ -1,0 +1,26 @@
+[project]
+name = "integritymap"
+version = "0.1.0"
+description = "Interactive companion to a survey of integrity attacks and defenses in LLM alignment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "plotly>=7.0",
+    "streamlit>=1.65",
+]
+
+[project.scripts]
+integritymap = "integritymap:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+build = [
+    "pylatexenc>=2.10",
+]
+dev = [
+    "pytest>=8.0",
+]

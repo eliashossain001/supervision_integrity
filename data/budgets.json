@@ -1,0 +1,98 @@
+[
+ {
+  "key": "wu2024prefpoison",
+  "policy": 5,
+  "proxy": 0.3,
+  "other_set": false
+ },
+ {
+  "key": "rando2024universal",
+  "policy": 5,
+  "proxy": 0.5,
+  "other_set": false
+ },
+ {
+  "key": "pathmanathan2025poisoning",
+  "policy": 0.5,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "tong2025badjudge",
+  "policy": null,
+  "proxy": 1,
+  "other_set": true
+ },
+ {
+  "key": "baumgartner2024bestofvenom",
+  "policy": 1,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "chen2024darkside",
+  "policy": 1,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "sanderson2026sequential",
+  "policy": 1,
+  "proxy": null,
+  "other_set": true
+ },
+ {
+  "key": "hilel2025hypnosis",
+  "policy": 1,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "guo2026rlvrbackdoor",
+  "policy": 2,
+  "proxy": null,
+  "other_set": true
+ },
+ {
+  "key": "fu2025poisonbench",
+  "policy": 3,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "wang2023rlhfpoison",
+  "policy": 5,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "pathmanathan2024advbdgen",
+  "policy": 5,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "shi2025safer",
+  "policy": null,
+  "proxy": 5,
+  "other_set": false
+ },
+ {
+  "key": "dutta2025great",
+  "policy": 10,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "shao2025poisonedalign",
+  "policy": 10,
+  "proxy": null,
+  "other_set": false
+ },
+ {
+  "key": "shi2023badgpt",
+  "policy": null,
+  "proxy": 10,
+  "other_set": false
+ }
+]

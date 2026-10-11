@@ -1,0 +1,142 @@
+[
+ {
+  "dataset": "HH-RLHF",
+  "gated": false,
+  "key": "bai2022training",
+  "labelers": "crowdworkers",
+  "annotator_id": "no",
+  "date": "collection tranche only",
+  "guideline": "no",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "Summarize from feedback",
+  "gated": false,
+  "key": "stiennon2020learning",
+  "labelers": "contract labelers",
+  "annotator_id": "yes (worker)",
+  "date": "batch only",
+  "guideline": "no",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "WebGPT comparisons",
+  "gated": false,
+  "key": "nakano2021webgpt",
+  "labelers": "contractors",
+  "annotator_id": "no",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "SHP",
+  "gated": false,
+  "key": "ethayarajh2022understanding",
+  "labelers": "Reddit votes",
+  "annotator_id": "no",
+  "date": "comment time only",
+  "guideline": "n.a.",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "OASST1 rankings",
+  "gated": false,
+  "key": "kopf2023openassistant",
+  "labelers": "volunteers",
+  "annotator_id": "no (ranks merged)",
+  "date": "message time only",
+  "guideline": "no",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "HelpSteer2",
+  "gated": false,
+  "key": "wang2024helpsteer2",
+  "labelers": "vendor annotators",
+  "annotator_id": "no",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "PKU-SafeRLHF",
+  "gated": false,
+  "key": "ji2025pkusaferlhf",
+  "labelers": "humans with GPT-4 pre-labels",
+  "annotator_id": "no",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "Chatbot Arena 33K",
+  "gated": true,
+  "key": "zheng2023judging",
+  "labelers": "site users",
+  "annotator_id": "yes (judge)",
+  "date": "yes (tstamp)",
+  "guideline": "n.a.",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "Arena preference 55K",
+  "gated": false,
+  "key": "chiang2024chatbot",
+  "labelers": "site users",
+  "annotator_id": "no",
+  "date": "no",
+  "guideline": "n.a.",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "PRISM",
+  "gated": false,
+  "key": "kirk2024prism",
+  "labelers": "paid participants",
+  "annotator_id": "yes (user_id)",
+  "date": "yes (per conversation)",
+  "guideline": "no (task type only)",
+  "upstream": "n.a."
+ },
+ {
+  "dataset": "UltraFeedback",
+  "gated": false,
+  "key": "cui2024ultrafeedback",
+  "labelers": "GPT-4 judge",
+  "annotator_id": "judge named in card only",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "prompt source only"
+ },
+ {
+  "dataset": "Nectar",
+  "gated": false,
+  "key": "zhu2024starling",
+  "labelers": "GPT-4 judge",
+  "annotator_id": "judge named in card only",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "source name"
+ },
+ {
+  "dataset": "Tülu 3 preference mix",
+  "gated": false,
+  "key": "lambert2025tulu3",
+  "labelers": "mostly GPT-4o judge",
+  "annotator_id": "judge named in paper only",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "source name and record ID"
+ },
+ {
+  "dataset": "Skywork preference 80K",
+  "gated": false,
+  "key": "liu2024skywork",
+  "labelers": "mixed, inherited",
+  "annotator_id": "no",
+  "date": "no",
+  "guideline": "no",
+  "upstream": "source name"
+ }
+]

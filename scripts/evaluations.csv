@@ -1,0 +1,74 @@
+row,column,paper,defense,outcome,note
+annotation_checks,source,tong2025badjudge,merging two backdoored judges,partial,"Point-wise attack success falls from 93.8 to 0.0, but pairwise success stays at 58.8."
+annotation_checks,source,tong2025badjudge,continued fine-tuning on clean data,works,Removes most of the backdoor but costs about 10 points of clean accuracy.
+annotation_checks,source,tong2025badjudge,5-shot rationale demonstrations,fails,Attack success stays high.
+annotation_checks,source,tong2025badjudge,ONION input filter,fails,Flags most clean inputs as well.
+annotation_checks,source,tong2025badjudge,BKI trigger detection,fails,Detects no triggered input.
+annotation_checks,source,tong2025badjudge,label-rationale consistency check,fails,High false-positive rate.
+annotation_checks,source,shi2024judgedeceiver,known-answer detection,fails,Misses most injected prompts.
+annotation_checks,source,shi2024judgedeceiver,perplexity detection,fails,Misses many injected prompts.
+annotation_checks,source,shi2024judgedeceiver,windowed perplexity detection,fails,Misses many injected prompts.
+annotation_checks,source,raina2024judgerobust,perplexity detection,partial,Catches the universal phrase in part; detection only.
+annotation_checks,source,maloyan2025adversarialjudge,perplexity filter,partial,Many injections still evade the filter.
+annotation_checks,source,maloyan2025adversarialjudge,instruction filter,partial,Many injections still evade the filter.
+annotation_checks,source,maloyan2025adversarialjudge,moderation classifier,partial,Many injections still evade the classifier.
+annotation_checks,source,maloyan2025adversarialjudge,all three filters combined,partial,Evasion falls but stays substantial.
+annotation_checks,source,maloyan2025adversarialjudge,multi-model judge committee,partial,A committee of seven mixed-architecture judges cuts injection success to 10.2-19.3%.
+annotation_checks,source,yang2026bite,linear style control,fails,Judge scores stay nearly the same.
+annotation_checks,source,yang2026bite,non-linear debiasing,fails,The style attack still lifts scores.
+annotation_checks,source,yang2026bite,meta-judge detection,fails,Does not catch the style edits.
+annotation_checks,source,yang2026bite,injection detector,fails,Catches none of the style edits.
+annotation_checks,source,yang2026bite,randomized prompting,partial,Cuts the score lift but does not remove it.
+annotation_checks,source,yang2026bite,LLM rewriting of responses,partial,Cuts the lift but also lowers clean scores.
+annotation_checks,source,buening2025strategyproof,pessimistic median of per-labeler estimates,works,Resists strategic labelers in a small synthetic bandit; no LLM test.
+annotation_checks,source,alazraki2025preamble,windowed perplexity filter,fails,Misses 90% of preamble attacks.
+annotation_checks,source,alazraki2025preamble,human inspection,fails,Humans flag attacked and clean responses at similar rates.
+annotation_checks,source,li2025robustjudge,benchmark of eight prompt-level defenses,partial,"No defense is best on robustness, utility, and cost; the most robust keeps under a third of utility."
+annotation_checks,source,acharya2026ropoll,geometric-median judge panel,works,Beats mean aggregation under synthetic Byzantine scores at rates up to 50%; no real injection tested.
+annotation_checks,source,liu2025counterfactual,counterfactual re-evaluation,partial,Detection F1 of 95.8-99.8% on strong judges; much lower on weak judges.
+annotation_checks,channel,ding2026rubrics,few-shot exemplars,fails,Recovers little of the rubric drift and sometimes makes it worse.
+annotation_checks,channel,ding2026rubrics,three-judge majority vote,fails,Recovers only 0.1-3.7 points.
+dataset_filtering,source,wang2023rlhfpoison,loss-based filter,fails,"Length attack success falls only from 73.10 to 65.31%, and harmfulness rises from 9.90 to 11.96%."
+dataset_filtering,dataset,wu2024prefpoison,spectral outlier removal,fails,No significant effect on the best attacks.
+dataset_filtering,dataset,wu2024prefpoison,loss outlier removal,fails,No significant effect on the best attacks.
+dataset_filtering,dataset,wu2024prefpoison,ALIBI label differential privacy,fails,Ineffective even at a 0.3% budget.
+dataset_filtering,dataset,pathmanathan2025poisoning,spectral signatures,fails,Does not separate the poisoned pairs.
+dataset_filtering,dataset,pathmanathan2025poisoning,gradient clustering,fails,Clusters do not reveal the poisoned pairs.
+dataset_filtering,dataset,pathmanathan2025poisoning,high-loss removal,fails,Does not find score-selected poison.
+dataset_filtering,dataset,pathmanathan2025poisoning,low-loss filtering,partial,Finds 60% of the poison selected by DPO score and misses the other attacks.
+dataset_filtering,dataset,baumgartner2024bestofvenom,reward model trained on clean data re-ranks outputs,partial,Weakens the injected sentiment; results shown in a figure only.
+dataset_filtering,dataset,fu2025poisonbench,Superfiltering (keep the top 10% of data),works,"Helpfulness attack success falls from 47.96 to 8.44, but 90% of the data is discarded."
+dataset_filtering,dataset,dutta2025great,spectral signatures,fails,Attack success falls only from 79.5 to 74.1%.
+dataset_filtering,dataset,dutta2025great,activation clustering,fails,Attack success falls only from 79.5 to 76.4%.
+dataset_filtering,dataset,pathmanathan2024advbdgen,n-gram trigger filter,fails,Catches fixed triggers but not paraphrased ones.
+dataset_filtering,dataset,pathmanathan2024advbdgen,perplexity check,fails,Perplexity does not separate the paraphrased triggers.
+dataset_filtering,dataset,nguyen2024curatron,robust low-rank repair of preference scores,works,Restores DPO performance after a targeted response-injection attack; needs more than two responses per prompt.
+robust_objectives,dataset,rosati2025unsafefeedback,benchmark of nine harmful-fine-tuning defenses,partial,No method is generally effective; the best need a 100x loss weight.
+robust_objectives,dataset,ghitu2026certification,partition ensemble with a certificate,works,Ensemble attack success is at most 5.73% against up to 48.9% for a single model; certifies up to nine poisoned points.
+robust_objectives,dataset,fu2025poisonbench,switching the objective (rDPO and others),fails,rDPO gives 28.59 against 29.96 for DPO.
+robust_objectives,dataset,pathmanathan2024advbdgen,safety-backdoor defense,fails,Ineffective against the paraphrased backdoor; no numbers given.
+channel_validation,source,liu2026preferenceinstability,sparse-autoencoder detection in the reward model,works,"A classifier on sparse-autoencoder features reaches 92.7% accuracy, against 54.3% on raw hidden states; known trigger only."
+channel_validation,channel,ding2026rubrics,checking the rubric on two benchmark sources,partial,Recovers part of the drift in some settings and nothing of the largest drop.
+forensics,source,yi2025beat,BEAT triggered-input detection,works,Average AUROC of 99.6 on the five competition models; detection only.
+forensics,source,zeng2024beear,BEEAR backdoor removal,works,Attack success falls from above 95% to below 1%.
+forensics,source,sheshadri2025latent,latent adversarial training,works,"On one model, the triggered reward rises from -12.100 to 1.556."
+forensics,source,zhong2026watch,monitoring activations along the weight change,works,Flags 98.72-100% of triggered prompts with 0.50-0.84% false positives.
+forensics,source,rando2024competition,trigger-search competition,partial,No submitted trigger drew more harmful outputs than the planted one on four of the five models.
+forensics,source,haselhorst2026detecting,activation-matched fine-tuning,partial,Detects tampering on two models but does not recover the trigger or reduce the attack.
+forensics,source,lin2025backdoorcollapse,known-backdoor aggregation,unclear,Results on the RLHF models appear only in a figure.
+forensics,dataset,fu2025poisonbench,OSFT unlearning,works,Removes the backdoor but needs the trigger.
+forensics,dataset,fu2025poisonbench,NPO unlearning,works,Removes the backdoor but needs the poisoned data.
+forensics,dataset,fu2025poisonbench,Llama Guard output screening,fails,Attack success barely changes.
+forensics,dataset,dutta2025great,ONION,fails,Attack success stays near 70%.
+forensics,dataset,dutta2025great,BEEAR,fails,Attack success stays near 75%.
+forensics,dataset,dutta2025great,CleanGen,fails,Attack success stays near 73%.
+forensics,dataset,dutta2025great,WAG model merging,partial,Attack success falls from 79.5 to 53.7%.
+forensics,dataset,shao2025poisonedalign,BEAT trigger detection,partial,Detects the combined attack well and the naive attack less well.
+forensics,dataset,shao2025poisonedalign,BAIT backdoor scan,fails,Scores clean and poisoned models almost the same.
+forensics,dataset,pathmanathan2024advbdgen,trigger removal by unlearning,fails,Paraphrased triggers resist removal.
+forensics,dataset,pathmanathan2024advbdgen,round-trip translation,fails,Paraphrased triggers survive translation.
+forensics,dataset,pathmanathan2024advbdgen,safety training after poisoning,fails,Paraphrased-trigger success stays high.
+forensics,channel,guo2026rlvrbackdoor,RPO,fails,Part of four defenses that cut attack success by only about 10% on average.
+forensics,channel,guo2026rlvrbackdoor,Self-Reminder,fails,Part of four defenses that cut attack success by only about 10% on average.
+forensics,channel,guo2026rlvrbackdoor,CROW,fails,Part of four defenses that cut attack success by only about 10% on average.
+forensics,channel,guo2026rlvrbackdoor,CleanGen,fails,Part of four defenses that cut attack success by only about 10% on average.
